@@ -40,7 +40,7 @@ public class ClassController extends BaseController {
         return createJsonResult(userClassService.getClassList(uid, sid, aid));
     }
 
-    @PostMapping("/my/one")
+    @PostMapping("/user/one")
     public String getOneClass(HttpServletRequest request, @RequestBody String data) {
 
         JSONObject requestDataJson = JSONObject.parseObject(data);
@@ -53,7 +53,7 @@ public class ClassController extends BaseController {
         return createJsonResult(userClassService.getMyClass(uid, sid, aid, cid));
     }
 
-    @PostMapping("/my/all")
+    @PostMapping("/user/all")
     public String getAllClass(HttpServletRequest request, @RequestBody String data) {
 
         JSONObject requestDataJson = JSONObject.parseObject(data);
